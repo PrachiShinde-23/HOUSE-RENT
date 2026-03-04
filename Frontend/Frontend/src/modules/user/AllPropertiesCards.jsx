@@ -2,7 +2,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import Toast from "../common/Toast";
-import API_BASE_URL from "../../../config/apiConfig";
+import API_BASE_URL from "../../config/apiConfig";
 
 const AllPropertiesCards = ({ loggedIn }) => {
   const [allProperties, setAllProperties] = useState([]);

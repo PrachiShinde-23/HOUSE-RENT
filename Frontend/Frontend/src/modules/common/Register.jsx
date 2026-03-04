@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Toast from "../common/Toast";
-import API_BASE_URL from "../../../config/apiConfig";
+import API_BASE_URL from "../../config/apiConfig";
 
 axios.defaults.withCredentials = true;
 
