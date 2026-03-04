@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 8001;
 
 app.use(express.json());
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:3000', 'https://house-rent-frontend.onrender.com'],
+  origin: ['http://localhost:5173', 'http://localhost:3000', 'https://house-rent-3.onrender.com'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
   credentials: true
 }));
