@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Toast from "../common/Toast";
+import API_BASE_URL from "../../../config/apiConfig";
 
 axios.defaults.withCredentials = true;
 
@@ -34,7 +35,7 @@ const Register = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8001/api/user/register",
+        `${API_BASE_URL}/api/user/register`,
         data,
         { withCredentials: true }
       );

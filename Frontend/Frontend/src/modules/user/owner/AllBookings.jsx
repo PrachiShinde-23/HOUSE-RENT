@@ -1,7 +1,8 @@
 import { message } from "antd";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import {useNavigate} from "react-router-dom"
+import {useNavigate} from "react-router-dom";
+import API_BASE_URL from "../../../../config/apiConfig";
 
 axios.defaults.withCredentials = true; 
 
@@ -11,7 +12,7 @@ const OwnerAllBookings = () => {
  const getAllProperty = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8001/api/owner/getallbookings",
+        `${API_BASE_URL}/api/owner/getallbookings`,
         { withCredentials: true }
       );
 
@@ -39,7 +40,7 @@ const OwnerAllBookings = () => {
   const handleStatus = async (bookingId, propertyId, status) => {
     try {
       const res = await axios.post(
-        "http://localhost:8001/api/owner/handlebookingstatus",
+        `${API_BASE_URL}/api/owner/handlebookingstatus`,
         { bookingId, propertyId, status },
         { withCredentials: true }
       );

@@ -16,8 +16,8 @@ const PORT = process.env.PORT || 8001;
 
 app.use(express.json());
 app.use(cors({
-  origin: 'http://localhost:5173',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  origin: ['http://localhost:5173', 'http://localhost:3000', 'https://house-rent-frontend.onrender.com'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
   credentials: true
 }));
 app.use(cookieParser());

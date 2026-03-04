@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { message } from "antd";
-import {useNavigate} from "react-router-dom"
+import {useNavigate} from "react-router-dom";
+import API_BASE_URL from "../../../../config/apiConfig";
 
 axios.defaults.withCredentials = true; 
 
@@ -53,7 +54,7 @@ function AddProperty() {
 
     try {
       const res = await axios.post(
-        "http://localhost:8001/api/owner/postproperty",
+        `${API_BASE_URL}/api/owner/postproperty`,
         formData,
         { withCredentials: true }
       );

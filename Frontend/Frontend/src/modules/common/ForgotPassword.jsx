@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Toast from "../common/Toast";
+import API_BASE_URL from "../../../config/apiConfig";
 
 axios.defaults.withCredentials = true;
 
@@ -38,7 +39,7 @@ const ForgotPassword = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:8001/api/user/forgotpassword",
+        `${API_BASE_URL}/api/user/forgotpassword`,
         data,
         { withCredentials: true }
       );
