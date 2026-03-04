@@ -20,6 +20,6 @@ npm install
 npm start
 
 Frontend:
-npm install
+npm install OR
 npm run dev
 
