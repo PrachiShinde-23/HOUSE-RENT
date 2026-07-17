@@ -1,4 +1,4 @@
-# 🏠 House Rent MERN Application
+# 🏠 House Rent MERN Application (RentSphere)
 
 ## Tech Stack
 - MongoDB
